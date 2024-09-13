@@ -34,6 +34,7 @@ Raleway
  - accent-orange: #DA802F
  */
 
+ /* COMPONENTS */
  :root{
   /* COLOR */
   --black: #000000;
@@ -44,6 +45,146 @@ Raleway
   --accent-orange: #DA802F;
 
   /* SPACE */
+  --xsmall-space: 8px;
   --small-space: 16px;
   --medium-space: 24px;
  }
+
+ /**************************************************/
+ /* GENERIC STYLE */
+
+ /* Font Sytle */
+ .no-underline{
+  text-decoration: none;
+ }
+
+ .italic{
+  font-style: italic;
+ }
+
+ /* Color */
+ .green{
+  color: var(--main-green);
+ }
+
+ /* Opacity */
+ .opacity-50{
+  opacity: 0.5;
+ }
+
+
+ /* -------------------------------------- */
+ /* From here, some setting only applies on Laptop Device! */
+ /* So when converting WRD, carefully pick layput properties. */
+
+ /* Width */
+ .w-50{
+  width: 50%; /* laptop & tablet */
+ }
+
+
+ /**************************************************/
+ /* ELEMENT STYLE */
+
+ /* ALL */
+ *{
+  box-sizing: border-box;
+ }
+
+ /* Body */
+ body{
+  background-color: var(--back-white);
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header{
+  display: flex;
+  flex-direction: row;
+}
+
+header img{
+  width: 100px;
+}
+
+/* Main */
+main{
+
+}
+
+/* Footer */
+footer{
+  display: flex;
+  flex-direction: row; /* laptop & tablet */
+}
+
+footer img{
+  width: 80px;
+}
+
+ /* Section */
+ section.page-links{
+  /* laptop only! */
+  display: flex;
+  flex-direction: row;
+  gap: var(--xsmall-space);
+ }
+
+ section.contact-info{
+
+ }
+
+ section.self-intro{
+
+ }
+
+ section.work{
+
+ }
+
+ section.skills{
+
+ }
+ 
+ section.contact-form{
+
+ }
+
+ /* Division */
+ div.col-container{
+  display: flex;
+  flex-direction: row;
+ }
+
+ div.s-space{
+  height: var(--small-space);
+ }
+
+ div.form-item{
+
+ }
+
+ /* Link */
+ a.link-button-fill{
+
+ }
+
+ a.link-button-nofill{
+
+ }
+
+ a.link-text:hover{
+  text-decoration: underline;
+ }
+
+ /* Form */
+
+ /* Icon */
+ i.nav-menu{
+  display: none; /* laptop */
+ }
+ 
