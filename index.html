@@ -29,24 +29,31 @@
 <body>
 
     <!-- This is a top nav bar. -->
-    <header style="border: 1px solid;">
-    <!-- Make it sticky? Which is better for UX?? -->
-     <!-- Logo -->
-     <img src="image/Moe_logo.png" alt="Moe Yokota's Logo">
-     <!-- Pages -->
-     <section class="pages">
-        <a href="" class="active">Home</a>
-        <a href="">About ME</a>
-        <a href="">Work</a>
-     </section>
-     <section class="contact-info">
-        <a href="mailto:lionmocchi@outlook.com">
-            <i class="fa-regular fa-envelope"></i>
-        </a>
-        <a href="">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-     </section>
+    <header style="background-color: bisque;">
+        <!-- Make it sticky? Which is better for UX?? -->
+         
+        <!-- Logo -->
+        <img src="image/Moe_logo.png" alt="Moe Yokota's Logo">
+
+        <!-- Pages -->
+        <section class="page-links">
+            <a href="" class="link-button-nofill">Home</a>
+            <a href="" class="no-underline link-button-nofill">About Me</a>
+            <a href="" class="no-underline link-button-nofill">Work</a>
+        </section>
+
+        <!-- Contact Links -->
+        <section class="contact-info">
+            <a href="mailto:lionmocchi@outlook.com" class="no-underline">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="" class="no-underline">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </section>
+
+        <!-- Page navigation icon for mobile & tablet -->
+        <i class="fa-solid fa-bars nav-menu"></i>
     </header>
 
     <!-- This is the main content. -->
@@ -64,29 +71,28 @@
                     solutions that benefit not only businesses and their 
                     customers but also the whole society.
                 </p>
-                <a href="" class="link-button">About Me</a>
+                <a href="" class="link-button-fill no-underline">About Me</a>
             </article>
-            <!-- My Image -->
-            <img src="" alt="">
+            <img src="image/Moe_self picture.png" alt="Photo of my face with the logo on top">
         </section>
 
         <!-- This is a gallery section, showing my recent work. -->
         <section class="work">
             <h2>Work</h2>
-            <div class="3-col-container">
+            <div class="col-container">
                 <a href=""><img src="image/demo-image.jpg" alt=""></a>
                 <a href=""><img src="image/demo-image.jpg" alt=""></a>
                 <a href=""><img src="image/demo-image.jpg" alt=""></a>
             </div>
-            <a href="" class="link-button">View All Work</a>
+            <a href="" class="link-button-fill no-underline">View All Work</a>
         </section>
 
-        <!-- This is a skill section -->
-        <section class="skill">
+        <!-- This is a skills section -->
+        <section class="skills">
             
             <h2>Skills</h2>
 
-            <div class="3-col-container">
+            <div class="col-container">
 
                 <article>
                     <i class="fa-regular fa-pen-to-square header-decor"></i>
@@ -125,16 +131,16 @@
 
         </section>
 
-        <!-- This is a contact section -->
-        <section class="contact">
+        <!-- This is a contact form section -->
+        <section class="contact-form">
 
             <div class="w-50">
 
                 <h1>Let's Work Together.</h1>
                 <p>If you're interested in working with me, send me a message to get started!</p>
-                <div class="small-space"></div>
-                <p>Connect with me on <a href="">LinkedIn</a></p>
-                <p>View my <a href="document/Moe Yokota - UX Designer Resume.pdf" target="_blank">Resume <i class="fa-regular fa-file-pdf"></i></a></p>
+                <div class="s-space"></div>
+                <p>Connect with me on <a href="www.linkedin.com/in/moe-yokota-b28276303" class="green">LinkedIn</a></p>
+                <p>View my <a href="document/Moe Yokota - UX Designer Resume.pdf" target="_blank" class="green">Resume <i class="fa-regular fa-file-pdf"></i></a></p>
 
             </div>
 
@@ -155,6 +161,10 @@
                     <textarea id="user-message" rows="20"></textarea>
                 </div>
 
+                <div class="form-item">
+                    <button>Submit</button>
+                </div>
+
             </form>
 
         </section>
@@ -172,15 +182,15 @@
         </ul>
         <ul class="w-25">
             <li class="list-title">More</li>
-            <li><a href="">Home</a></li>
-            <li><a href="">About Me</a></li>
-            <li><a href="">Work</a></li>
+            <li><a href="" class="no-underline link-text">Home</a></li>
+            <li><a href="" class="no-underline link-text">About Me</a></li>
+            <li><a href="" class="no-underline link-text">Work</a></li>
         </ul>
         <ul class="w-25">
             <li class="list-title">Contact</li>
-            <li><a href="">Email</a></li>
-            <li><a href="">LinkedIn </a></li>
-            <li><a href="document/Moe Yokota - UX Designer Resume.pdf" target="_blank">Resume <i class="fa-regular fa-file-pdf"></i></a></li>
+            <li><a href="" class="no-underline link-text">Email</a></li>
+            <li><a href="" class="no-underline link-text">LinkedIn </a></li>
+            <li><a href="document/Moe Yokota - UX Designer Resume.pdf" target="_blank" class="no-underline link-text">Resume <i class="fa-regular fa-file-pdf"></i></a></li>
         </ul>
     </footer>
 </body>
