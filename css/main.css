@@ -35,7 +35,17 @@ Raleway
  */
 
  :root{
+  /* COLOR */
+  --black: #000000;
+  --dark-gray: #74787B;
+  --light-gray: #C6C6C6;
+  --back-white: #EBEAEA;
   --main-green: #0D7D8B;
+  --accent-orange: #DA802F;
+
+  /* SPACE */
+  --small-space: 16px;
+  --medium-space: 24px;
  }
 
  h1{
