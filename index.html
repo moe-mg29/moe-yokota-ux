@@ -29,7 +29,7 @@
 <body>
 
     <!-- This is a top nav bar. -->
-    <header style="background-color: bisque;">
+    <header>
         <!-- Make it sticky? Which is better for UX?? -->
          
         <!-- Logo -->
@@ -37,9 +37,9 @@
 
         <!-- Pages -->
         <section class="page-links">
-            <a href="" class="link-button-nofill">Home</a>
-            <a href="" class="no-underline link-button-nofill">About Me</a>
-            <a href="" class="no-underline link-button-nofill">Work</a>
+            <button class="nofill"><a href="" class="no-underline active">Home</a></button>
+            <button class="nofill"><a href="" class="no-underline">About Me</a></button>
+            <button class="nofill"><a href="" class="no-underline">Work</a></button>
         </section>
 
         <!-- Contact Links -->
@@ -71,7 +71,7 @@
                     solutions that benefit not only businesses and their 
                     customers but also the whole society.
                 </p>
-                <a href="" class="link-button-fill no-underline">About Me</a>
+                <button class="fill"><a href="" class="no-underline">About Me</a></button>
             </article>
             <img src="image/Moe_self picture.png" alt="Photo of my face with the logo on top">
         </section>
@@ -84,7 +84,7 @@
                 <a href=""><img src="image/demo-image.jpg" alt=""></a>
                 <a href=""><img src="image/demo-image.jpg" alt=""></a>
             </div>
-            <a href="" class="link-button-fill no-underline">View All Work</a>
+            <button class="fill"><a href="" class="no-underline">View All Work</a></button>
         </section>
 
         <!-- This is a skills section -->
@@ -158,11 +158,11 @@
 
                 <div class="form-item">
                     <label for="user-message">Message</label>
-                    <textarea id="user-message" rows="20"></textarea>
+                    <textarea id="user-message" rows="10"></textarea>
                 </div>
 
                 <div class="form-item">
-                    <button>Submit</button>
+                    <button class="fill">Submit</button>
                 </div>
 
             </form>
@@ -171,7 +171,7 @@
     </main>
 
     <!-- This is a footer. -->
-    <footer style="border: 1px solid;">
+    <footer>
         <ul class="w-50">
             <li>
                 <!-- Logo -->
