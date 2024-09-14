@@ -48,6 +48,7 @@ Raleway
   --xsmall-space: 8px;
   --small-space: 16px;
   --medium-space: 24px;
+  --large-space: 48px;
  }
 
  /**************************************************/
@@ -76,6 +77,14 @@ Raleway
  /* -------------------------------------- */
  /* From here, some setting only applies on Laptop Device! */
  /* So when converting WRD, carefully pick layput properties. */
+ /*
+ Responsive Scale Value
+ - mobile: <=600
+ - tablet: <=980
+ - laptop: <1700
+ - desktop: >=1700
+
+ */
 
  /* Width */
  .w-50{
@@ -91,7 +100,7 @@ Raleway
   box-sizing: border-box;
  }
 
- /* Body */
+ /* BODY */
  body{
   background-color: var(--back-white);
   font-family: "Raleway", sans-serif;
@@ -101,7 +110,12 @@ Raleway
   flex-direction: column;
 }
 
-/* Header */
+body > *{
+  /* Laptop & tablet */
+  padding: var(--medium-space) var(--large-space);
+}
+
+/* HEADER */
 header{
   display: flex;
   flex-direction: row;
@@ -111,12 +125,12 @@ header img{
   width: 100px;
 }
 
-/* Main */
+/* MAIN */
 main{
 
 }
 
-/* Footer */
+/* FOOTER */
 footer{
   display: flex;
   flex-direction: row; /* laptop & tablet */
@@ -126,7 +140,8 @@ footer img{
   width: 80px;
 }
 
- /* Section */
+ /* SECTION */
+ /* Header: page links */
  section.page-links{
   /* laptop only! */
   display: flex;
@@ -134,27 +149,44 @@ footer img{
   gap: var(--xsmall-space);
  }
 
+ /* Header: contact-info links */
  section.contact-info{
 
  }
 
+ /* Main: introduction */
  section.self-intro{
-
+  /* Laptop */
+  display: flex;
+  flex-direction: row;
  }
 
+ section.self-intro > *{
+  width: 50%;
+ }
+
+ section.self-intro img{
+  max-width: 400px;
+ }
+
+ /* Main: work */
  section.work{
 
  }
 
+ /* Main: skill */
  section.skills{
 
  }
  
+ /* Main: contact form */
  section.contact-form{
-
+  /* laptop only! */
+  display: flex;
+  flex-direction: row;
  }
 
- /* Division */
+ /* DIVISION */
  div.col-container{
   display: flex;
   flex-direction: row;
@@ -168,23 +200,33 @@ footer img{
 
  }
 
- /* Link */
- a.link-button-fill{
-
- }
-
- a.link-button-nofill{
-
- }
+ /* LINK */
 
  a.link-text:hover{
   text-decoration: underline;
  }
 
- /* Form */
+ /* BUTTON */
+ button.nofill{
 
- /* Icon */
+ }
+
+ button.fill{
+
+ }
+
+ /* FORM */
+
+ /* LIST */
+
+ /* ICON */
  i.nav-menu{
   display: none; /* laptop */
+ }
+
+ i.header-decor{
+  color: var(--light-gray);
+  opacity: 0.5;
+  font-size: 80px;
  }
  
