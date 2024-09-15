@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moe Yokota - UX Designer</title>
+
+    <!-- Fonts -->
+    <!-- Cormorant -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <!-- Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/f90b615356.js" crossorigin="anonymous"></script>
+    
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
+
+    <!-- Style Sheet -->
+	<link rel="stylesheet" href="css/main.css"/>
+
+</head>
+
+<body>
+
+    <!-- This is a top nav bar. -->
+    <header>
+        <!-- Make it sticky? Which is better for UX?? -->
+         
+        <!-- Logo -->
+        <img src="image/Moe_logo.png" alt="Moe Yokota's Logo">
+
+        <!-- Pages -->
+        <section class="page-links"> 
+            <a href="home.html" class="no-underline hvr-grow active">Home</a>
+            <a href="about-me.html" class="no-underline hvr-grow">About Me</a>
+            <a href="" class="no-underline hvr-grow">Work</a>
+        </section>
+
+        <!-- Contact Links -->
+        <section class="contact-info">
+            <a href="mailto:lionmocchi@outlook.com" class="no-underline">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="" class="no-underline">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </section>
+
+        <!-- Page navigation icon for mobile & tablet -->
+        <i class="fa-solid fa-bars nav-menu"></i>
+    </header>
+
+    <!-- This is the main content. -->
+    <main>
+        <!-- This is a self introduction section. -->
+        <section class="self-intro">
+            <article>
+                <h1>Hello, I'm Moe.</h1>
+                <p class="italic green">
+                    UX designer with a strong passion for solving 
+                    complex problems.
+                </p>
+                <p>
+                    I am committed myself to being a problem-solver who delivers 
+                    solutions that benefit not only businesses and their 
+                    customers but also the whole society.
+                </p>
+                <a href="" class="no-underline button-green-fill large hvr-sweep-to-right-black">About Me</a>
+            </article>
+            <img src="image/Moe_self picture.png" alt="Photo of my face with the logo on top">
+        </section>
+
+        <!-- This is a gallery section, showing my recent work. -->
+        <section class="work">
+            <h2>Work</h2>
+            <div class="col-container">
+                <a href=""><img src="image/demo-image.jpg" alt=""></a>
+                <a href=""><img src="image/demo-image.jpg" alt=""></a>
+                <a href=""><img src="image/demo-image.jpg" alt=""></a>
+            </div>
+            <a href="" class="no-underline button-green-fill large hvr-sweep-to-right-black">View All Work</a>
+        </section>
+
+        <!-- This is a skills section -->
+        <section class="skills">
+            
+            <h2>Skills</h2>
+
+            <div class="col-container">
+
+                <article>
+                    <i class="fa-regular fa-pen-to-square header-decor"></i>
+                    <h3>Design</h3>
+                    <p>
+                        Experienced in UX/UI and graphic design with a focus on 
+                        user-centered design principles. Skilled in conducting 
+                        user research, developing wireframes, and creating cohesive 
+                        visual concepts, using Figma and Adobe Creative Suite.
+                    </p>
+                </article>
+
+                <article>
+                    <i class="fa-regular fa-comments header-decor"></i>
+                    <h3>Social</h3>
+                    <p>
+                        Highly collaborative and detail-oriented with strong communication, 
+                        project management, and presentation skills. Proficient in working 
+                        in cross-functional teams, effectively presenting design concepts to 
+                        stakeholders, and integrating feedback to refine solutions.
+                    </p>
+                </article>
+
+                <article>
+                    <i class="fa-solid fa-code header-decor"></i>
+                    <h3>Coding</h3>
+                    <p>
+                        With a solid background in basic computer science skills, including 
+                        HTML, CSS, JavaScript, PHP, and more, I am capable of delivering 
+                        design solutions that are easily translatable into code, resulting 
+                        in smoother collaboration with developers.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- This is a contact form section -->
+        <section class="contact-form">
+
+            <div class="w-50">
+
+                <h1>Let's Work Together.</h1>
+                <p>If you're interested in working with me, send me a message to get started!</p>
+                <div class="s-space"></div>
+                <p>Connect with me on <a href="www.linkedin.com/in/moe-yokota-b28276303" class="green">LinkedIn</a></p>
+                <p>View my <a href="document/Moe Yokota - UX Designer Resume.pdf" target="_blank" class="green">Resume <i class="fa-regular fa-file-pdf"></i></a></p>
+
+            </div>
+
+            <form action="" class="w-50">
+
+                <div class="form-item">
+                    <label for="user-name">Name <span class="opacity-50">(required)</span></label>
+                    <input type="text" id="user-name">
+                </div>
+
+                <div class="form-item">
+                    <label for="user-email">Email <span class="opacity-50">(required)</span></label>
+                    <input type="text" id="user-email">
+                </div>
+
+                <div class="form-item">
+                    <label for="user-message">Message</label>
+                    <textarea id="user-message" rows="10"></textarea>
+                </div>
+
+                <div class="form-item">
+                    <button class="fill-black large hvr-sweep-to-right-green">Submit</button>
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+
+    <!-- This is a footer. -->
+    <footer>
+        <ul class="w-50">
+            <li>
+                <!-- Logo -->
+                <img src="image/Moe_logo.png" alt="Moe Yokota's Logo">
+            </li>
+            <li>Moe Yokota</li>
+            <li>UX/UI Designer</li>
+        </ul>
+        <ul class="w-25">
+            <li class="list-title">More</li>
+            <li><a href="" class="no-underline link-text">Home</a></li>
+            <li><a href="" class="no-underline link-text">About Me</a></li>
+            <li><a href="" class="no-underline link-text">Work</a></li>
+        </ul>
+        <ul class="w-25">
+            <li class="list-title">Contact</li>
+            <li><a href="" class="no-underline link-text">Email</a></li>
+            <li><a href="" class="no-underline link-text">LinkedIn </a></li>
+            <li><a href="document/Moe Yokota - UX Designer Resume.pdf" target="_blank" class="no-underline link-text">Resume <i class="fa-regular fa-file-pdf"></i></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
