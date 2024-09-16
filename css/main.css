@@ -29,7 +29,7 @@ Raleway
  - black: #000000
  - dark-gray: #74787B
  - light-gray: #C6C6C6
- - back-white: #EBEAEA
+ - white-gray: #EBEAEA
  - main-green: #0D7D8B
  - accent-orange: #DA802F
  */
@@ -41,7 +41,7 @@ Raleway
   --white: #ffffff;
   --dark-gray: #74787B;
   --light-gray: #C6C6C6;
-  --back-white: #EBEAEA;
+  --white-gray: #EBEAEA;
   --main-green: #0D7D8B;
   --accent-orange: #DA802F;
 
@@ -49,7 +49,9 @@ Raleway
   --xsmall-space: 8px;
   --small-space: 16px;
   --medium-space: 24px;
-  --large-space: 48px;
+  --large-space: 32px;
+  --xlarge-space: 48px;
+  --xxlarge-space: 62px;
  }
 
  /**************************************************/
@@ -117,7 +119,7 @@ Raleway
 
 body > *{
   /* Laptop & tablet */
-  padding: var(--medium-space) var(--large-space);
+  padding: var(--xlarge-space);
 }
 
 /* HEADER */
@@ -127,7 +129,7 @@ header{
   justify-content: space-between;
   align-items: center;
 
-  background-color: var(--back-white);
+  background-color: var(--white-gray);
 }
 
 header img{
@@ -136,7 +138,10 @@ header img{
 
 /* MAIN */
 main{
-
+  display: flex;
+  flex-direction: column;
+  /* Laptop only */
+  gap: var(--xxlarge-space);
 }
 
 /* FOOTER */
@@ -164,7 +169,7 @@ footer li a{
  section.page-links{
   /* laptop only! */
   display: flex;
-  gap: var(--xsmall-space);
+  gap: var(--small-space);
  }
 
  section.page-links a {
@@ -179,7 +184,7 @@ footer li a{
  /* Header: contact-info links */
  section.contact-info{
   display: flex;
-  gap: var(--xsmall-space);
+  gap: var(--small-space);
  }
 
  section.contact-info > *{
@@ -191,20 +196,35 @@ footer li a{
   /* Laptop */
   display: flex;
   flex-direction: row;
+  gap: var(--large-space);
  }
 
- section.self-intro > *{
-  width: 50%;
+ section.self-intro article{
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-space);
+ }
+
+ section.self-intro article a{
+/* Any way to make the width to 'hug content'? */
  }
 
  section.self-intro img{
   max-width: 400px;
+  max-height: 400px;
  }
 
  /* Main: work */
  section.work{
-
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-space);
+  /* How to expand the pic width when the display gets larger? */
  }
+
+ section.work a{
+  /* Any way to make the width to 'hug content'? */
+   }
 
  /* Main: skill */
  section.skills{
@@ -220,8 +240,16 @@ footer li a{
 
  /* DIVISION */
  div.col-container{
+  /* Laptop & Tablet */
   display: flex;
   flex-direction: row;
+  gap: var(--small-space);
+ }
+
+ div.col-container article{
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-space);
  }
 
  div.s-space{
