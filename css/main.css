@@ -104,152 +104,6 @@ Raleway
   color: var(--black);
 }
 
-/* -------------------------------------- */
-/* RWD SETTING! */
-/*
- Responsive Scale Value
- - single column: <680px 
-    ... Mobile or Small tablet
- - Tablet: <1025px
- - Laptop: >=1025px *Padding right & left -> 150px
- */
- 
-/* For Mobile & Small Tablet */
-@media screen and (max-width: 679px) {
-  body > *{
-    padding-left: var(--large-space);
-    padding-right: var(--large-space);
-  }
-
-  /* SECTION */
-
-  /* Self-intro */
-  section.self-intro{
-    display: flex;
-    flex-direction: column;
-    gap: var(--large-space);
-    align-items: center;
-   }
-
-  /* image width */
-   section.self-intro img{
-    width: 75%;
-   }
-
-  /* Main: contact form */
-  section.contact-form{
-  display: flex;
-  flex-direction: column;
-  gap: var(--xxlarge-space);
-  }
-
-  /* DIVISION */
-  div.col-container{
-    display: flex;
-    flex-direction: column;
-    gap: var(--small-space);
-  }
-  div.col-container a{
-    height: 15rem;
-    overflow: hidden;
-  }
-}
-
-/* For Tablet */
-@media screen and (min-width: 680px) and (max-width: 1024px) {
-  body > *{
-    padding-left: var(--xlarge-space);
-    padding-right: var(--xlarge-space);
-  }
-
-  /* SECTION */
-
-  /* Self-intro */
-  section.self-intro{
-    /* Laptop & Tablet*/
-    display: flex;
-    flex-direction: row;
-    gap: var(--large-space);
-    align-items: center;
-   }
-
-   /* image width */
-   section.self-intro img{
-    width: 50%;
-   }
-
-   /* Contact form */
-  section.contact-form{
-    display: flex;
-    flex-direction: row;
-    gap: var(--medium-space);
-  }
-
-  /* Content width */
-  div.contact-me-message{
-    width: 50%;
-  }
-  section.contact-form form{
-    width: 50%;
-  }
-
-  /* DIVISION */
-  /* THINK ABOUT THE LAYOUT */
-  div.col-container{
-    display: flex;
-    flex-direction: row;
-    gap: var(--small-space);
-   }
-}
-
-/* For Laptop */
-@media screen and (min-width: 1025px) {
-  body > *{
-    padding-left: 150px;
-    padding-right: 150px;
-  }
-
-  /* SECTION */
-
-  /* Self-intro */
-  section.self-intro{
-    /* Laptop & Tablet*/
-    display: flex;
-    flex-direction: row;
-    gap: var(--large-space);
-    align-items: center;
-   }
-
-   /* image width */
-   section.self-intro img{
-    width: 50%;
-   }
-
-   /* Main: contact form */
-  section.contact-form{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  /* Content width */
-  div.contact-me-message{
-    width: 33%;
-  }
-  section.contact-form form{
-    width: 50%;
-  }
-
-  /* DIVISION */
-  div.col-container{
-    display: flex;
-    flex-direction: row;
-    gap: var(--small-space);
-   }
-}
-
-/* ---------------------------------------- */
-
 /* HEADER */
 header{
   display: flex;
@@ -353,10 +207,6 @@ footer li a{
   gap: var(--small-space);
  }
 
- section.work div a{
-  border: 1px solid var(--white-gray);
-}
-
  /* Main: skill */
  section.skills{
   display: flex;
@@ -400,17 +250,6 @@ footer li a{
  h1, h2, h3{
   font-family: 'Cormorant', serif;
   font-weight: 700;
- }
-
- h1{
-  /* Laptop */
-  font-size: 64px;
-  /* Tablet -> 56px, Mobile-> 40px */
- }
-
- h2{
-  font-size: 40px;
-  /* Tablet & Mobile -> 24px */
  }
 
  h3{
@@ -593,3 +432,206 @@ li.list-title{
   font-size: 80px;
  }
  
+ /* -------------------------------------- */
+/* RWD SETTING! */
+/*
+ Responsive Scale Value
+ - single column: <680px 
+    ... Mobile or Small tablet
+ - Tablet: <1025px
+ - Laptop: >=1025px *Padding right & left -> 150px
+ */
+ 
+/* For Mobile & Small Tablet */
+@media screen and (max-width: 679px) {
+  body > *{
+    padding-left: var(--large-space);
+    padding-right: var(--large-space);
+  }
+
+  main section{
+    padding: var(--xxlarge-space) 0;
+  }
+
+  /* HEADER */
+  section.page-links, section.contact-info{
+    display: none;
+  }
+
+  i.nav-menu{
+    display: block;
+   }
+
+  /* SECTION */
+  /* Self-intro */
+  section.self-intro{
+    display: flex;
+    flex-direction: column;
+    gap: var(--large-space);
+    align-items: center;
+   }
+
+  /* image width */
+   section.self-intro img{
+    width: 75%;
+  }
+
+  
+
+  /* Main: contact form */
+  section.contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: var(--xxlarge-space);
+  }
+
+  /* DIVISION */
+  div.col-container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--small-space);
+  }
+  div.col-container a{
+    max-height: 250px;
+    overflow: hidden;
+  }
+
+  section.work a.link-image{
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
+    max-width: 600px;
+  }
+
+  /* HEADING */
+  h1{
+    font-size: 40px;
+   }
+  
+   h2{
+    font-size: 32px;
+   }
+
+   /* ICON */
+   i.header-decor{
+    font-size: 120px;
+   }
+}
+
+/* For Tablet */
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+  body > *{
+    padding-left: var(--xlarge-space);
+    padding-right: var(--xlarge-space);
+  }
+
+  /* SECTION */
+
+  /* Self-intro */
+  section.self-intro{
+    display: flex;
+    flex-direction: row;
+    gap: var(--large-space);
+    align-items: center;
+   }
+
+   /* image width */
+   section.self-intro img{
+    width: 50%;
+   }
+
+   /* Contact form */
+  section.contact-form{
+    display: flex;
+    flex-direction: row;
+    gap: var(--medium-space);
+  }
+
+  /* Content width */
+  div.contact-me-message{
+    width: 50%;
+  }
+  section.contact-form form{
+    width: 50%;
+  }
+
+  /* DIVISION */
+  /* THINK ABOUT THE LAYOUT */
+  div.col-container{
+    display: flex;
+    flex-direction: row;
+    gap: var(--small-space);
+   }
+
+  section.work img{
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  /* HEADING */
+  h1{
+    font-size: 56px;
+   }
+  
+   h2{
+    font-size: 32px;
+   }
+}
+
+/* For Laptop */
+@media screen and (min-width: 1025px) {
+  body > *{
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  /* SECTION */
+
+  /* Self-intro */
+  section.self-intro{
+    /* Laptop & Tablet*/
+    display: flex;
+    flex-direction: row;
+    gap: var(--large-space);
+    align-items: center;
+   }
+
+   /* image width */
+   section.self-intro img{
+    width: 50%;
+   }
+
+   /* Main: contact form */
+  section.contact-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Content width */
+  div.contact-me-message{
+    width: 33%;
+  }
+  section.contact-form form{
+    width: 50%;
+  }
+
+  /* DIVISION */
+  div.col-container{
+    display: flex;
+    flex-direction: row;
+    gap: var(--small-space);
+   }
+
+   section.work img{
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  /* HEADING */
+  h1{
+    font-size: 64px;
+   }
+  
+   h2{
+    font-size: 40px;
+   }
+}
+
+/* ---------------------------------------- */
