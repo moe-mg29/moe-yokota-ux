@@ -120,6 +120,39 @@ Raleway
     padding-left: var(--large-space);
     padding-right: var(--large-space);
   }
+
+  /* SECTION */
+
+  /* Self-intro */
+  section.self-intro{
+    display: flex;
+    flex-direction: column;
+    gap: var(--large-space);
+    align-items: center;
+   }
+
+  /* image width */
+   section.self-intro img{
+    width: 75%;
+   }
+
+  /* Main: contact form */
+  section.contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: var(--xxlarge-space);
+  }
+
+  /* DIVISION */
+  div.col-container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--small-space);
+  }
+  div.col-container a{
+    height: 15rem;
+    overflow: hidden;
+  }
 }
 
 /* For Tablet */
@@ -128,6 +161,45 @@ Raleway
     padding-left: var(--xlarge-space);
     padding-right: var(--xlarge-space);
   }
+
+  /* SECTION */
+
+  /* Self-intro */
+  section.self-intro{
+    /* Laptop & Tablet*/
+    display: flex;
+    flex-direction: row;
+    gap: var(--large-space);
+    align-items: center;
+   }
+
+   /* image width */
+   section.self-intro img{
+    width: 50%;
+   }
+
+   /* Contact form */
+  section.contact-form{
+    display: flex;
+    flex-direction: row;
+    gap: var(--medium-space);
+  }
+
+  /* Content width */
+  div.contact-me-message{
+    width: 50%;
+  }
+  section.contact-form form{
+    width: 50%;
+  }
+
+  /* DIVISION */
+  /* THINK ABOUT THE LAYOUT */
+  div.col-container{
+    display: flex;
+    flex-direction: row;
+    gap: var(--small-space);
+   }
 }
 
 /* For Laptop */
@@ -136,6 +208,44 @@ Raleway
     padding-left: 150px;
     padding-right: 150px;
   }
+
+  /* SECTION */
+
+  /* Self-intro */
+  section.self-intro{
+    /* Laptop & Tablet*/
+    display: flex;
+    flex-direction: row;
+    gap: var(--large-space);
+    align-items: center;
+   }
+
+   /* image width */
+   section.self-intro img{
+    width: 50%;
+   }
+
+   /* Main: contact form */
+  section.contact-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Content width */
+  div.contact-me-message{
+    width: 33%;
+  }
+  section.contact-form form{
+    width: 50%;
+  }
+
+  /* DIVISION */
+  div.col-container{
+    display: flex;
+    flex-direction: row;
+    gap: var(--small-space);
+   }
 }
 
 /* ---------------------------------------- */
@@ -224,24 +334,10 @@ footer li a{
  }
 
  /* Main: introduction */
- section.self-intro{
-  /* Laptop */
-  display: flex;
-  flex-direction: row;
-  gap: var(--large-space);
-  align-items: center;
-  /* DO I NEED THIS? */
-  /* justify-content: space-between; */
- }
-
  section.self-intro article{
   display: flex;
   flex-direction: column;
   gap: var(--small-space);
- }
-
- section.self-intro article a{
-/* Any way to make the width to 'hug content'? */
  }
 
  section.self-intro img{
@@ -255,12 +351,11 @@ footer li a{
   display: flex;
   flex-direction: column;
   gap: var(--small-space);
-  /* How to expand the pic width when the display gets larger? */
  }
 
- section.work a{
-  /* Any way to make the width to 'hug content'? */
-   }
+ section.work div a{
+  border: 1px solid var(--white-gray);
+}
 
  /* Main: skill */
  section.skills{
@@ -268,22 +363,8 @@ footer li a{
   flex-direction: column;
   gap: var(--small-space);
  }
- 
- /* Main: contact form */
- section.contact-form{
-  /* laptop only! */
-  display: flex;
-  flex-direction: row;
-  gap: var(--medium-space);
- }
 
  /* DIVISION */
- div.col-container{
-  /* Laptop & Tablet */
-  display: flex;
-  flex-direction: row;
-  gap: var(--small-space);
- }
 
  div.col-container a{
   width: 100%;
@@ -291,7 +372,6 @@ footer li a{
 
  div.col-container a img{
   width: 100%;
-  height: auto;
  }
 
  div.col-container article{
