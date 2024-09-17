@@ -77,19 +77,6 @@ Raleway
   opacity: 0.5;
  }
 
-
- /* -------------------------------------- */
- /* From here, some setting only applies on Laptop Device! */
- /* So when converting WRD, carefully pick layput properties. */
- /*
- Responsive Scale Value
- - mobile: <=600
- - tablet: <=980
- - laptop: <1700
- - desktop: >=1700
-
- */
-
  /* Width */
  .w-50{
   width: 50%; /* laptop & tablet */
@@ -117,11 +104,41 @@ Raleway
   color: var(--black);
 }
 
-body > *{
-  /* Laptop & tablet */
-  padding-left: var(--xlarge-space);
-  padding-right: var(--xlarge-space);
+/* -------------------------------------- */
+/* RWD SETTING! */
+/*
+ Responsive Scale Value
+ - single column: <680px 
+    ... Mobile or Small tablet
+ - Tablet: <1025px
+ - Laptop: >=1025px *Padding right & left -> 150px
+ */
+ 
+/* For Mobile & Small Tablet */
+@media screen and (max-width: 679px) {
+  body > *{
+    padding-left: var(--large-space);
+    padding-right: var(--large-space);
+  }
 }
+
+/* For Tablet */
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+  body > *{
+    padding-left: var(--xlarge-space);
+    padding-right: var(--xlarge-space);
+  }
+}
+
+/* For Laptop */
+@media screen and (min-width: 1025px) {
+  body > *{
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+/* ---------------------------------------- */
 
 /* HEADER */
 header{
@@ -228,8 +245,8 @@ footer li a{
  }
 
  section.self-intro img{
-  max-width: 400px;
   /* DO I NEED THIS? */
+  /* max-width: 400px; */
   /* max-height: 400px; */
  }
 
@@ -290,7 +307,7 @@ footer li a{
  div.contact-me-message{
   display: flex;
   flex-direction: column;
-  gap: var(--xsmall-space);
+  gap: var(--small-space);
  }
 
  div.form-item{
