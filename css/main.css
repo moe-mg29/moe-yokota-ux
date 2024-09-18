@@ -145,9 +145,16 @@ footer{
   background-color: var(--black);
 }
 
+
 footer img{
   width: 100px;
 }
+
+footer ul{
+  display: flex;
+  flex-direction: column;
+  gap: var(--medium-space);
+ }
 
 footer li{
   color: var(--white);
@@ -207,6 +214,36 @@ footer li a{
   gap: var(--small-space);
  }
 
+ /* Image Link Style ... Tablet and Mobile */
+ a.link-image{
+  position: relative;
+}
+
+a.link-image img{
+  opacity: 0.2;
+}
+
+div.project-title-cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 var(--xsmall-space);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 1;
+}
+
+a.link-image p{
+  color: var(--black);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
  /* Main: skill */
  section.skills{
   display: flex;
@@ -246,6 +283,17 @@ footer li a{
   gap: var(--xsmall-space);
  }
 
+ div.link-stacks-on-footer{
+  display: flex;
+  flex-direction: row;
+  /* Laptop & Tablet */
+  width: 50%;
+ }
+
+ div.link-stacks-on-footer ul{
+  width: 100%;
+ }
+
  /* HEADING */
  h1, h2, h3{
   font-family: 'Cormorant', serif;
@@ -254,6 +302,10 @@ footer li a{
 
  h3{
   font-size: 24px;
+ }
+
+ p{
+  line-height: 1.875em;
  }
 
 /* ---------------- */
@@ -268,12 +320,19 @@ footer li a{
   background-color: var(--main-green);
  }
 
- a.large{
+ a.large-button{
   font-size: 16px;
   padding: 12px 16px;
  }
 
  /* BUTTON */
+ /* FONT SETTING */
+ button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+ }
+
  button.fill-black{
   color: var(--white);
   background-color: var(--black);
@@ -281,7 +340,6 @@ footer li a{
  }
 
  button.large{
-  font-size: 16px;
   padding: 12px 16px;
  }
 
@@ -314,8 +372,10 @@ footer li a{
   left: 0;
   right: 0;
   bottom: 0;
+
   /* This is the background color */
   background: var(--black);
+
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -356,8 +416,10 @@ footer li a{
   left: 0;
   right: 0;
   bottom: 0;
+
   /* This is the background color */
   background: var(--main-green);
+
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -371,6 +433,7 @@ footer li a{
 }
 .hvr-sweep-to-right-green:hover, .hvr-sweep-to-right-green:focus, .hvr-sweep-to-right-green:active {
   color: white;
+  
 }
 .hvr-sweep-to-right-green:hover:before, .hvr-sweep-to-right-green:focus:before, .hvr-sweep-to-right-green:active:before {
   -webkit-transform: scaleX(1);
@@ -410,12 +473,6 @@ footer li a{
 
  /* LIST */
 
- footer ul{
-  display: flex;
-  flex-direction: column;
-  gap: var(--xsmall-space);
- }
-
 li.list-title{
   font-weight: 500;
   padding-bottom: var(--xsmall-space);
@@ -424,6 +481,8 @@ li.list-title{
  /* ICON */
  i.nav-menu{
   display: none; /* laptop */
+  font-size: 24px;
+  padding: var(--xsmall-space);
  }
 
  i.header-decor{
@@ -434,6 +493,10 @@ li.list-title{
 
  i.intext-end{
   padding-left: 0.3em;
+ }
+
+ footer i{
+  margin-left: 0.3em;
  }
 
  /* Horizontal Rule */
@@ -454,6 +517,12 @@ li.list-title{
  
 /* For Mobile & Small Tablet */
 @media screen and (max-width: 679px) {
+  /* Visibility Control */
+  .hidden-on-mobile{
+    display: none;
+  }
+
+  /* Layout */
   body > *{
     padding-left: var(--large-space);
     padding-right: var(--large-space);
@@ -470,7 +539,19 @@ li.list-title{
 
   i.nav-menu{
     display: block;
-   }
+  }
+
+  /* FOOTER */
+  footer{
+    display: flex;
+    flex-direction: column;
+    gap: var(--xlarge-space);
+  }
+
+  footer a{
+    padding-top: var(--xsmall-space);
+    padding-bottom: var(--xsmall-space);
+  }
 
   /* SECTION */
   /* Main: self-intro */
@@ -487,6 +568,10 @@ li.list-title{
   }
 
   /* Main: work */
+  section.self-intro article{
+    gap: var(--large-space);
+   }
+
   section.work{
     gap: var(--large-space);
   }
@@ -494,6 +579,10 @@ li.list-title{
   section.work a.link-image{
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
     max-width: 600px;
+  }
+
+  a.link-image p{
+    font-size: 1.2em;
   }
 
   /* Main: skill */
@@ -528,25 +617,52 @@ li.list-title{
     height: 0;
    }
   
-   div.contact-me-message{
+  div.contact-me-message{
     display: flex;
     flex-direction: column;
     gap: var(--small-space);
-   }
+  }
+
+  div.link-stacks-on-footer{
+    width: 100%;
+  }
 
   /* HEADING */
   h1{
     font-size: 40px;
-   }
+  }
   
-   h2{
+  h2{
     font-size: 32px;
-   }
+  }
 
    /* ICON */
-   i.header-decor{
+  i.header-decor{
     font-size: 120px;
-   }
+  }
+
+  /* LINK */
+  a.large-button{
+   height: var(--xxlarge-space);
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+  }
+
+  /* BUTTON */
+  button.large{
+   height: var(--xxlarge-space);
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+  }
+
+  /* font setting for LINK button & BUTTON */
+  a.large-button, button{
+    font-size: 1.25em;
+  }
 }
 
 /* For Tablet */
@@ -559,6 +675,12 @@ li.list-title{
   /* HEADER */
   header{
     font-size: 24px;
+  }
+
+  /* FOOTER */
+  footer a{
+    padding-top: var(--xsmall-space);
+    padding-bottom: var(--xsmall-space);
   }
 
   /* SECTION */
@@ -586,6 +708,10 @@ li.list-title{
     width: 50%;
    }
 
+   /* Work */
+   a.link-image img{
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.75); 
+  }
    /* Contact form */
   section.contact-form{
     display: flex;
@@ -609,18 +735,32 @@ li.list-title{
     gap: var(--small-space);
    }
 
-  section.work img{
-    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-
   /* HEADING */
   h1{
     font-size: 56px;
-   }
+  }
   
-   h2{
+  h2{
     font-size: 32px;
-   }
+  }
+
+  /* LINK */
+  a.large-button{
+    height: var(--xxlarge-space);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+ 
+  /* BUTTON */
+  button.large{
+    height: var(--xxlarge-space);
+  }
+ 
+   /* font setting for LINK button & BUTTON */
+   a.large-button, button{
+     font-size: 1.25em;
+  }
 }
 
 /* For Laptop */
@@ -645,6 +785,50 @@ li.list-title{
    section.self-intro img{
     width: 50%;
    }
+  
+  /* Main: Work */
+  /* Hover Transition */
+  a.link-image{
+    position: relative;
+  }
+
+  a.link-image img{
+    opacity: 1;
+    transition: .5s ease;
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  div.project-title-cover{
+    transition: .5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 var(--xsmall-space);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+  }
+
+  .link-image:hover img {
+    opacity: 0.2;
+  }
+  
+  .link-image:hover .project-title-cover {
+    opacity: 1;
+  }
+
+  a.link-image p{
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+
 
    /* Main: contact form */
   section.contact-form{
@@ -668,10 +852,7 @@ li.list-title{
     gap: var(--small-space);
    }
 
-   section.work img{
-    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-
+  
   /* HEADING */
   h1{
     font-size: 64px;
