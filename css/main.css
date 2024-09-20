@@ -201,12 +201,6 @@ footer li a{
   gap: var(--small-space);
  }
 
- section.self-intro img{
-  /* DO I NEED THIS? */
-  /* max-width: 400px; */
-  /* max-height: 400px; */
- }
-
  /* Main: work */
  section.work{
   display: flex;
